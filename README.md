@@ -20,8 +20,6 @@
 ### 📱 Mobile View  
 ![Mobile Screenshot](./images/mobile.png)
 
-
-
 ---
 
 ## 🧠 Features  
@@ -59,31 +57,29 @@
 
 ## 💡 Code Example  
 
-```js
-function handleSearch(usersArray) {
-  let searchText = inputField.value.toLowerCase();
+    function handleSearch(usersArray) {
+      let searchText = inputField.value.toLowerCase();
 
-  let filteredArray = usersArray.filter((item) =>
-    item.name.toLowerCase().includes(searchText) ||
-    item.email.toLowerCase().includes(searchText)
-  );
+      let filteredArray = usersArray.filter((item) =>
+        item.name.toLowerCase().includes(searchText) ||
+        item.email.toLowerCase().includes(searchText)
+      );
 
-  usersList.innerHTML = "";
+      usersList.innerHTML = "";
 
-  filteredArray.forEach((user) => {
-    usersList.innerHTML += `
-      <div class="user">
-        <div class="user-image">
-          <img src="${user.image}" alt="${user.name}">
-        </div>
-        <div class="user-details">
-          <h3>${user.name}</h3>
-          <p>${user.email}</p>
-        </div>
-      </div>`;
-  });
-}
-
+      filteredArray.forEach((user) => {
+        usersList.innerHTML += `
+          <div class="user">
+            <div class="user-image">
+              <img src="${user.image}" alt="${user.name}">
+            </div>
+            <div class="user-details">
+              <h3>${user.name}</h3>
+              <p>${user.email}</p>
+            </div>
+          </div>`;
+      });
+    }
 
 ---
 
@@ -113,8 +109,14 @@ This app is fully responsive and adapts beautifully to all screen sizes:
 Follow these simple steps to set up the project on your local system 👇  
 
 1. **Clone the repository**  
-   ```bash
-   git clone https://github.com/roshan0011830/SmartSearch.git
+       git clone https://github.com/roshan0011830/SmartSearch.git
+
+2. **Open the folder**  
+       cd SmartSearch
+
+3. **Run the project**  
+   - Just open `index.html` in your browser  
+   ✅ That’s it! Your SmartSearch app is ready to use locally 🎉  
 
 ---
 
@@ -149,8 +151,4 @@ Your support keeps me motivated to create and share more open-source projects �
 
 ---
 
-> 🧭 *"SmartSearch — because clean code and smooth functionality never go out of style."*
-
-
-
-
+> 🧭 *"Searchify — because clean code and smooth functionality never go out of style."*
