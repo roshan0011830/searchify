@@ -1,0 +1,176 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* BODY CENTERING */
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #f4f5f7;
+  display: grid;
+  place-content: center;
+  color: #333;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 380px;
+  height: 80vh;
+  background-color: #ffffff;
+  border-radius: 0.8rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+h1 {
+  text-align: center;
+  background-color: #5b7a72; /* calm greenish-grey tone */
+  color: #fff;
+  font-size: 1.3rem;
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+}
+
+/* SEARCH BAR */
+#search-box {
+  height: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+  border-bottom: 1px solid #e2e2e2;
+  background-color: #fafafa;
+}
+
+#search-box input {
+  width: 70%;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+#search-box input:focus {
+  border-color: #5b7a72;
+}
+
+#search-box button {
+  color: white;
+  background-color: #5b7a72;
+  padding: 0.45rem 1rem;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+/* USER LIST SECTION */
+.users-list {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background-color: #fdfdfd;
+}
+
+/* USER CARD */
+.user {
+  background-color: #f1f3f4;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.6rem 0.8rem;
+  margin-bottom: 0.6rem;
+  border-radius: 0.6rem;
+  border: 1px solid #e3e3e3;
+}
+
+.user-image {
+  height: 50px;
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.user-image img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* TEXT DETAILS */
+.user-details h3 {
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+  font-weight: bold;
+}
+
+.user-details p {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+/* SCROLLBAR STYLE */
+.users-list::-webkit-scrollbar {
+  width: 6px;
+}
+.users-list::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 10px;
+}
+.users-list::-webkit-scrollbar-thumb:hover {
+  background: #b9b9b9;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+    height: 85vh;
+  }
+
+  h1 {
+    font-size: 1.1rem;
+  }
+
+  #search-box {
+    padding: 0 0.8rem;
+  }
+
+  #search-box input {
+    width: 65%;
+    padding: 0.35rem 0.6rem;
+    font-size: 0.85rem;
+  }
+
+  #search-box button {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.85rem;
+  }
+
+  .user {
+    gap: 0.8rem;
+    padding: 0.5rem 0.6rem;
+  }
+
+  .user-details h3 {
+    font-size: 0.9rem;
+    
+  }
+
+  .user-details p {
+    font-size: 0.8rem;
+  }
+}
